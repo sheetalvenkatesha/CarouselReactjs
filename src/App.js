@@ -1,6 +1,7 @@
 
 import './App.css';
 import { useState , useEffect} from "react";
+//images for display
 import image1 from './images/downloadD1.jpg';
 import image2 from './images/download2.jpg';
 import image3 from './images/download7.jpg';
@@ -24,7 +25,7 @@ const defaultProps = {
   style: { width: '25rem', height: '20rem', alignItem: 'center' },
 };
 
-
+//products list
 const items = [
   {image: image1, names: 'Coke', price: 100, category:'Drinks'},
   {image: image2, names: 'Salted Lays', price: 200, category:'Snacks'},
@@ -40,6 +41,7 @@ function App() {
 
   const [defaultValue, setDefaultValue] = useState('Snacks')
   const [finalList,setFinalList]=useState(items);
+  //function to move to the next item
   const NextArrow = ({ onClick }) => {
     return (
 
@@ -50,7 +52,7 @@ function App() {
       </div>
     );
   };
-
+//funtion to move to the previous item
   const PrevArrow = ({ onClick }) => {
     return (
       <div className="arrow prev" onClick={onClick} style={{ fontSize: 30 }}>
@@ -61,7 +63,7 @@ function App() {
   };
 
   const [imageIndex, setImageIndex] = useState(0);
-
+ //carousel settings
   const settings = {
     infinite: true,
     lazyLoad: true,
