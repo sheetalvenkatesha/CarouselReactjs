@@ -76,11 +76,7 @@ function App() {
     beforeChange: (current, next) => setImageIndex(next),
 
   };
-  useEffect(()=>{
-  console.log("hi",defaultValue)
-  },defaultValue)
-
-  
+ 
   return (
     <h3 style={{ textAlign: 'center' }}>Product Carousel
       <div className="AppBackground">
